@@ -11,6 +11,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediaAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MediaAPI
 {
@@ -28,7 +30,7 @@ namespace MediaAPI
         {
 
             services.AddControllers();
-            
+            services.AddDbContext<MediaContext>(options => options.UseInMemoryDatabase("MediaContext Database"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

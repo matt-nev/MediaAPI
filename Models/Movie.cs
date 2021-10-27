@@ -10,6 +10,6 @@ namespace MediaAPI.Models
         public long Id { get; set; }
         public string Name { get; set; }
         public string Genre { get; set; }
-        public decimal Rating { get; set; }
+        public decimal Rating { get; set; } 
     }
 }
